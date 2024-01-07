@@ -12,10 +12,8 @@ jobs:
     with:
       qmk_ref: ${{ github.ref_name }}
 
-  publish:
+publish:
     name: 'QMK Userspace Publish'
-    uses: drashna/.github/.github/workflows/qmk_userspace_publish.yml@main
+    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
-    needs: [build]
-    with:
-      qmk_ref: ${{ github.ref_name }}
+    needs: build
