@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_BRIGHTNESS_UP,                   G(KC_L),             KC_VOLU,
         KC_BRIGHTNESS_DOWN,                 _______,             KC_VOLD,
         KC_MPRV,                             KC_MPLY,             KC_MNXT,
-        MO(2),                            G(KC_D),            MO(1)
+        _______,                            G(KC_D),            MO(1)
     ),
     [1] = LAYOUT(
                                                      _______,
@@ -20,13 +20,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_HUI,                RGB_SAI,           RGB_VAI,
         RGB_HUD,                RGB_SAD,           RGB_VAD,
         RGB_SPD,                RGB_SPI,          KC_TRNS
-    ),
-    [2] = LAYOUT(
-                                                     _______,
-        _______,        _______,          _______,
-        _______,                _______,           _______,
-        _______,                _______,           _______,
-        KC_TRNS,                _______,          _______
     ),
 };
 // clang-format on
