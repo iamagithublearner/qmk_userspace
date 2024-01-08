@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is my personal userspace file.  Most of my code exists here, as it's heavily shared.
+This is Drashna's personal userspace file.  Most of their code exists here, as it's heavily shared.
 
 * [Callback (keymap+misc)](docs/callbacks.md)
 * [Keycode Handling](docs/keyrecords.md)

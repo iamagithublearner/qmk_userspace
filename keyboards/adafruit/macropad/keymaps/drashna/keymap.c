@@ -8,25 +8,32 @@
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-                          LT(1,KC_MUTE),
-        KC_ENT,  KC_0,    KC_BSPC,
-        KC_7,    KC_8,    KC_9,
-        KC_4,    KC_5,    KC_6,
-        KC_1,    KC_2,    KC_3
+                                              LT(1,KC_MUTE),
+        KC_BRIGHTNESS_UP,                   G(KC_L),             KC_VOLU,
+        KC_BRIGHTNESS_DOWN,                 _______,             KC_VOLD,
+        KC_MPRV,                             KC_MPLY,             KC_MNXT,
+        MO(2),                            G(KC_D),            MO(1)
     ),
     [1] = LAYOUT(
-                          _______,
-        CK_TOGG, AU_TOGG, _______,
-        _______, _______, _______,
-        _______, _______, _______,
-        _______, _______, _______
+                                                     _______,
+        RGB_MODE_REVERSE,        RGB_TOG,          RGB_MODE_FORWARD,
+        RGB_HUI,                RGB_SAI,           RGB_VAI,
+        RGB_HUD,                RGB_SAD,           RGB_VAD,
+        RGB_SPD,                RGB_SPI,          KC_TRNS
+    ),
+    [2] = LAYOUT(
+                                                     _______,
+        _______,        _______,          _______,
+        _______,                _______,           _______,
+        _______,                _______,           _______,
+        KC_TRNS,                _______,          _______
     ),
 };
 // clang-format on
 
 #ifdef ENCODER_MAP_ENABLE
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [0] = {ENCODER_CCW_CW(KC_VOLU, KC_VOLD)},
     [1] = {ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)},
 };
 #endif
