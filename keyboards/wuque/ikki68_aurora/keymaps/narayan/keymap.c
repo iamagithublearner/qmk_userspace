@@ -17,10 +17,11 @@
 #include QMK_KEYBOARD_H
 #include "timer.h"
 #include "rgblight.h"
+//#include "autocorrect_data.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_all(
-        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC,    KC_DEL, KC_PSCR,
+        QK_GESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_BSPC,    KC_DEL, KC_PSCR,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,             KC_BRID, KC_BRIU,
         QK_LOCK, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,
         KC_LSFT, KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, RSFT_T(KC_CAPS),     KC_UP,
@@ -35,13 +36,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT_all(
         _______, _______, _______, KC_F13, KC_F14, KC_F15, KC_F16, KC_F17, KC_F18, KC_F19, KC_F20, _______, _______,  _______, _______,            _______,_______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             UG_VALD, UG_VALU,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             UG_HUEU,
-        _______, _______, _______,          _______,          UG_TOGG,          _______,          XXXXXXX, XXXXXXX, XXXXXXX,             UG_PREV, UG_VALD, UG_NEXT
+        _______, _______, _______,          _______,          UG_TOGG,          _______,          XXXXXXX, XXXXXXX, XXXXXXX,             UG_PREV, UG_HUED, UG_NEXT
     ),
     [3] = LAYOUT_all(
-        _______, PB_1,    PB_2,    PB_3,     PB_4,    PB_5,   PB_6,    PB_7,    PB_8,    PB_9,    PB_10,   _______,  _______, _______, _______,    DM_REC1,DM_REC2,
+        QK_BOOT, PB_1,    PB_2,    PB_3,     PB_4,    PB_5,   PB_6,    PB_7,    PB_8,    PB_9,    PB_10,   _______,  _______, _______, _______,    DM_REC1,DM_REC2,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             DM_PLY1, DM_PLY2,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,             _______,
