@@ -177,11 +177,10 @@ void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 
-// ==================================================
-// Timers
-// ==================================================
-
-void matrix_scan_user(void) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!record->event.pressed) {
+        return true;
+    }
 
     // --------------------------------------------------
     // Dynamic Macro white flash
@@ -222,4 +221,6 @@ void matrix_scan_user(void) {
         rgblight_set_layer_state(RGB_LAYER_AUTOCORRECT_ON, false);
         rgblight_set_layer_state(RGB_LAYER_AUTOCORRECT_OFF, false);
     }
+
+    return true;
 }
