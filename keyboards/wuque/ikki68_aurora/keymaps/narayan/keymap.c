@@ -42,6 +42,7 @@ enum rgb_status_layers {
     RGB_LAYER_DYNAMIC_FLASH,
     RGB_LAYER_DYNAMIC_STOP,
     RGB_LAYER_AUTOCORRECT_ON,
+    RGB_LAYER_AUTOCORRECT_OFF,
     narayan,
 };
 
